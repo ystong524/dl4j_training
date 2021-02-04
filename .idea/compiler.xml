@@ -9,5 +9,18 @@
         <module name="nd4j_training" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="nd4j" target="1.7" />
+      <module name="nd4j-api" target="1.7" />
+      <module name="nd4j-api-parent" target="1.7" />
+      <module name="nd4j-backend-impls" target="1.7" />
+      <module name="nd4j-backends" target="1.7" />
+      <module name="nd4j-common" target="8" />
+      <module name="nd4j-native" target="7" />
+      <module name="nd4j-native-api" target="1.7" />
+      <module name="nd4j-native-platform" target="1.7" />
+      <module name="nd4j-shade" target="1.7" />
+      <module name="protobuf" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
