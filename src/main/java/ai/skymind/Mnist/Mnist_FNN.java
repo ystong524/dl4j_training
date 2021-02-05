@@ -36,6 +36,8 @@ public class Mnist_FNN {
         trainMnist.setPreProcessor(scaler);
         testMnist.setPreProcessor(scaler);
 
+        System.out.println("Input = " + trainMnist.inputColumns());
+
         //setting model config
         MultiLayerConfiguration config = new NeuralNetConfiguration.Builder()
                 .seed(seed)
@@ -43,11 +45,11 @@ public class Mnist_FNN {
                 .weightInit(WeightInit.XAVIER)  //weight initialization
                 .activation(Activation.RELU)  //default activation function
                 .list()
-                .layer(new DenseLayer.Builder()  //hidden layer 1
-                        .nIn(trainMnist.inputColumns())  //specify the no. of examples in training data
+                .layer(new DenseLayer.Builder()  //input layer
+                        .nIn(trainMnist.inputColumns())  //specify the no. of examples in training data (784)
                         .nOut(124)
                         .build())
-                .layer(new DenseLayer.Builder()  //hidden layer 2
+                .layer(new DenseLayer.Builder()  //hidden layer 1
                         .nOut(282)
                         .build())
                 .layer(new OutputLayer.Builder()  //output layer
@@ -56,7 +58,7 @@ public class Mnist_FNN {
                         .nOut(10)  //specifiy the class nunmber for datasets
                         .build())
                 .build();
-        //total = 3 layers exclusing the input layer (we dont count layers without tunable weights)
+        //total = 2 layers exclusing the input layer (we dont count layers without tunable weights)
 
         MultiLayerNetwork model = new MultiLayerNetwork(config); //construct model
         model.init();  //initialize model
