@@ -1,4 +1,4 @@
-package ai.skymind;
+package ai.skymind.nd4j_ex;
 /*
  * Copyright (c) 2019 Skymind Holdings Bhd.
  * Copyright (c) 2020 CertifAI Sdn. Bhd.
@@ -18,7 +18,7 @@ package ai.skymind;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.factory.Nd4j;
 
-public class nd4j_ex5 {
+public class nd4j_ex9 {
     public static final String BLACK_BOLD = "\033[1;30m";
     public static final String BLUE_BOLD = "\033[1;34m";
     public static final String ANSI_RESET = "\u001B[0m";
@@ -31,43 +31,36 @@ public class nd4j_ex5 {
         System.out.println(BLACK_BOLD + "Default array" + ANSI_RESET);
         System.out.println(myArray);
 
-        //add operation
-        INDArray addArray = myArray.add(1);
-        System.out.println(BLACK_BOLD + "\nAdd 1 to array" + ANSI_RESET);
-        System.out.println(BLUE_BOLD + "myArray.add(1)" + ANSI_RESET);
-        System.out.println(addArray);
+        //Add row vector
+        INDArray rowVector = Nd4j.ones(1,5);
+        INDArray addedRowVector = myArray.addRowVector(rowVector);
+        System.out.println(BLACK_BOLD + "\nAdd row vector" + ANSI_RESET);
+        System.out.println(BLUE_BOLD + "myArray.addRowVector(rowVector)" + ANSI_RESET);
+        System.out.println(addedRowVector);
 
-        //add operation inplace
-        myArray.addi(1);
-        System.out.println(BLACK_BOLD + "\nAdd 1 to array inplace" + ANSI_RESET);
-        System.out.println(BLUE_BOLD + "myArray.addi(1)" + ANSI_RESET);
-        System.out.println(myArray);
-
-        //add array to array
-        INDArray randomArray = Nd4j.rand(3,5);
-        INDArray addArraytoArray = myArray.add(randomArray);
-        System.out.println(BLACK_BOLD + "\nAdd random array to array (array have to be in same size)" + ANSI_RESET);
-        System.out.println(BLUE_BOLD + "myArray.add(randomArray)" + ANSI_RESET);
-        System.out.println(addArraytoArray);
+        //Subtract column vector
+        INDArray columnVector = Nd4j.ones(3,1);
+        INDArray subtractedColVector = myArray.subColumnVector(columnVector);
+        System.out.println(BLACK_BOLD + "\nAdd row vector" + ANSI_RESET);
+        System.out.println(BLUE_BOLD + "myArray.subColumnVector(columnVector)" + ANSI_RESET);
+        System.out.println(subtractedColVector);
 
         /*
         EXERCISE:
         - Create arr1 with shape(3,3) initialize with random value
-        - Multiply each of the element on the array with 2
-        - Subtract arr1 with arr2. (arr2 = shape(3,3) with value of ones)
+        - Divide arr1 with row vector of [2,2,2]
+        - Multiply arr1 with column vector of [1,2,3]
         */
 
         INDArray arr1 = Nd4j.rand(3,3);
-        System.out.println("Original: " + arr1.toString());
-        arr1.muli(2);
-        System.out.println("Final: " + arr1.toString());
-        INDArray arr2 = Nd4j.ones(3,3);
-        INDArray arr3 = arr1.sub(arr2);
+        System.out.println("Original: " + arr1);
+        arr1.diviRowVector(Nd4j.ones(1,3).muli(2));
+        System.out.println("Divided: " + arr1);
 
-        System.out.println(arr2);
-        System.out.println(arr3);
+        arr1.mulColumnVector(Nd4j.create(new float[] {1,2,3})); //initially global precision is float
+        System.out.println("Multiplied: " + arr1);
 
-
-
+        arr1.mulColumnVector(Nd4j.create(new float[] {1,2,3}, 3,1)); //initially global precision is float
+        System.out.println("Multiplied: " + arr1);
     }
 }

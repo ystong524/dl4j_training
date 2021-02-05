@@ -5,12 +5,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>ai.skymind</groupId>
-  <artifactId>nd4j_training</artifactId>
+  <artifactId>dl4j_training</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>nd4j_training</name>
+  <name>dl4j_training</name>
   <!-- FIXME change it to the project's website -->
-  <url>https://github/ystong524/nd4j_training</url>
+  <url>https://github/ystong524/dl4j_training</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

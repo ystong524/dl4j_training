@@ -1,4 +1,4 @@
-package ai.skymind;
+package ai.skymind.nd4j_ex;
 /*
  * Copyright (c) 2019 Skymind Holdings Bhd.
  * Copyright (c) 2020 CertifAI Sdn. Bhd.
