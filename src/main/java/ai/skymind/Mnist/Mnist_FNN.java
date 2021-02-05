@@ -43,11 +43,11 @@ public class Mnist_FNN {
                 .weightInit(WeightInit.XAVIER)  //weight initialization
                 .activation(Activation.RELU)  //default activation function
                 .list()
-                .layer(new DenseLayer.Builder()  //input layer
+                .layer(new DenseLayer.Builder()  //hidden layer 1
                         .nIn(trainMnist.inputColumns())  //specify the no. of examples in training data
                         .nOut(124)
                         .build())
-                .layer(new DenseLayer.Builder()  //hidden layer 1
+                .layer(new DenseLayer.Builder()  //hidden layer 2
                         .nOut(282)
                         .build())
                 .layer(new OutputLayer.Builder()  //output layer
@@ -56,6 +56,7 @@ public class Mnist_FNN {
                         .nOut(10)  //specifiy the class nunmber for datasets
                         .build())
                 .build();
+        //total = 3 layers exclusing the input layer (we dont count layers without tunable weights)
 
         MultiLayerNetwork model = new MultiLayerNetwork(config); //construct model
         model.init();  //initialize model
