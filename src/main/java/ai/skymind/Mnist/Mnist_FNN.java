@@ -1,4 +1,4 @@
-package ai.skymind;
+package ai.skymind.Mnist;
 
 import org.deeplearning4j.datasets.iterator.impl.MnistDataSetIterator;
 import org.deeplearning4j.nn.conf.MultiLayerConfiguration;
