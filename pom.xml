@@ -16,9 +16,10 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
+    <nd4j.version>1.0.0-beta-7</nd4j.version>
+    <dl4j.version>1.0.0-beta7</dl4j.version>
+
   </properties>
-
-
 
   <dependencies>
     <dependency>
@@ -46,9 +47,18 @@
       <version>1.0.0-beta7</version>
     </dependency>
 
+
+
+
     <dependency>
       <groupId>org.deeplearning4j</groupId>
       <artifactId>deeplearning4j-ui-model</artifactId>
+      <version>1.0.0-beta7</version>
+    </dependency>
+
+    <!-- <dependency>
+      <groupId>org.datavec</groupId>
+      <artifactId>datavec-data</artifactId>
       <version>1.0.0-beta7</version>
     </dependency>
 
@@ -58,23 +68,20 @@
       <version>1.0.0-beta7</version>
     </dependency>
 
-    <!--<dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
-      <version>1.7.25</version>
+    <dependency>
+      <groupId>org.datavec</groupId>
+      <artifactId>datavec-data</artifactId>
+      <version>1.0.0-beta7</version>
     </dependency>
 
     <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-simple</artifactId>
-      <version>1.7.25</version>
-    </dependency>
+      <groupId>org.datavec</groupId>
+      <artifactId>datavec-arrow</artifactId>
+      <version>1.0.0-beta7</version>
+    </dependency>  -->
 
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-parent</artifactId>
-      <version>1.7.25</version>
-    </dependency> -->
+
+
 
     <!-- ND4J backend. You need one in every DL4J project. Normally define artifactId as either "nd4j-native-platform" or "nd4j-cuda-9.2-platform" -->
     <dependency>
@@ -82,6 +89,23 @@
       <artifactId>nd4j-native-platform</artifactId>
       <version>1.0.0-beta7</version>
     </dependency>
+    <dependency>
+      <groupId>org.datavec</groupId>
+      <artifactId>datavec-local</artifactId>
+      <version>1.0.0-beta7</version>
+    </dependency>
+
+
+
+    <dependency>
+      <groupId>org.datavec</groupId>
+      <artifactId>datavec-data-image</artifactId>
+      <version>1.0.0-beta7</version>
+    </dependency>
+
+
+
+
   </dependencies>
 
   <build>
