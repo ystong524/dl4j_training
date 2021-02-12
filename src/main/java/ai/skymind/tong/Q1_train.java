@@ -59,29 +59,6 @@ public class Q1_train {
         RecordReader rr = new CSVRecordReader(1, ',');
         rr.initialize(fs);
 
-        /*//ID,age,job,marital,education,default,balance,housing,loan,contact,day,month,duration,campaign,pdays,previous,poutcome,subscribed
-        // define schema
-        Schema sch = new Schema.Builder()
-                .addColumnInteger("ID")
-                .addColumnInteger("age")
-                .addColumnCategorical("job", Arrays.asList("admin.", "blue-collar", "entrepreneur", "housemaid", "management", "retired", "self-employed", "services", "student", "technician", "unemployed", "unknown"))
-                .addColumnCategorical("marital", Arrays.asList("divorced", "married", "single"))
-                .addColumnCategorical("education", Arrays.asList("primary", "secondary", "tertiary", "unknown"))
-                .addColumnCategorical("default", Arrays.asList("no", "yes"))
-                .addColumnInteger("balance")
-                .addColumnCategorical("housing", Arrays.asList("no", "yes"))
-                .addColumnCategorical("loan", Arrays.asList("no", "yes"))
-                .addColumnCategorical("contact", Arrays.asList("cellular", "telephone", "unknown"))
-                .addColumnInteger("day", 1, 31)
-                .addColumnCategorical("month", Arrays.asList("jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"))
-                .addColumnInteger("duration")
-                .addColumnInteger("campaign")
-                .addColumnInteger("pdays")
-                .addColumnInteger("previous")
-                .addColumnCategorical("poutcome", Arrays.asList("failure", "other", "success", "unknown"))
-                .addColumnCategorical("subscribed", Arrays.asList("no", "yes"))
-                .build();*/
-
         Schema sch = getTrainSchema();
         System.out.println("Original data");
         System.out.println(sch);
@@ -97,89 +74,75 @@ public class Q1_train {
             oriData.add(rr.next());
         }
 
-        /*//perform pca
-        sch.getIndexOfColumn("subscribed");
-        PCA pca = new PCA(data);*/
-
+        //set transform
         TransformProcess tp = new TransformProcess.Builder(sch)
                 .categoricalToInteger("job", "marital", "education", "default", "housing",
                         "loan", "contact", "month", "poutcome", "subscribed")
                 .filter(new FilterInvalidValues())
                 .build();
-
-        /*//ID,age,job,marital,education,default,balance,housing,loan,contact,day,month,duration,campaign,pdays,previous,poutcome,subscribed
-        TransformProcess tp = new TransformProcess.Builder(sch)
-                .removeColumns("ID", "day", "month")// "duration", "pdays", "campaign", "contact", "poutcome", "default", "previous")  //ignore id and call time
-                .categoricalToOneHot("job")
-                .categoricalToOneHot("marital")
-                .categoricalToOneHot("education")  //ordinal, but unknown??
-                .categoricalToInteger("default")
-                .categoricalToInteger("housing")
-                .categoricalToInteger("loan")
-                .categoricalToOneHot("contact")  //non-ordinal
-                .categoricalToOneHot("poutcome")  //non-ordinal
-
-                //one hot the target
-                .categoricalToInteger("subscribed")  //binary class
-                //filter invalid
-                .filter(new FilterInvalidValues())
-                .build();*/
-
         Schema final_sch = tp.getFinalSchema();
         System.out.println("After transformation");
         System.out.println(sch);
-
         System.out.println("no. of cols: " + final_sch.numColumns());
         System.out.println("col names: " + final_sch.getColumnNames());
         System.out.println("col types: " + final_sch.getColumnTypes());
-
-
         //apply transform
         List<List<Writable>> transData = LocalTransformExecutor.execute(oriData, tp);
-        RecordReader crr = new CollectionRecordReader(transData);
+
+
+        //new CRR
+        CollectionRecordReader crr = new CollectionRecordReader(transData);
         int labelIndex = sch.getIndexOfColumn("subscribed");
         int possible = 2;
         int batchSize = 2000;
         System.out.println("label at " + labelIndex);
-
-        List<String> label_names = final_sch.getColumnNames();
-
-
         DataSetIterator iter = new RecordReaderDataSetIterator(crr, transData.size(), labelIndex, possible);
         DataSet allData = iter.next();
 
         //manipulate training data
-        allData.shuffle();
+        System.out.println(allData.numOutcomes());
+        System.out.println(allData.numExamples());
+        System.out.println(allData.get(3));
+        allData.shuffle();  //***IMPORTANT: dont shuffle in GPU backend
+        //https://github.com/eclipse/deeplearning4j/issues/9142
+        System.out.println(allData.get(3));
+        Nd4j.getEnvironment().allowHelpers(false); //required for CPU - concat error
+
+
         //split for validation
         System.out.println("allData.numInputs() = " + allData.numInputs());
         System.out.println("allData.numOutcomes() = " + allData.numOutcomes());
 
-        //total == 31647 data
         SplitTestAndTrain test_train = allData.splitTestAndTrain(0.8);
         DataSet train = test_train.getTrain();
         DataSet val = test_train.getTest();
+
+        //***need to set label names since we've changed them
+        train.setLabelNames(Arrays.asList("0", "1"));
+        val.setLabelNames(Arrays.asList("0", "1"));
+
 
         //normalization before training
         DataNormalization scaler = new NormalizerMinMaxScaler(0, 1);
 
 
-        /*//1. apply scaler to DataSet
+        //1. apply scaler to DataSet
         scaler.fit(train);
         scaler.transform(train);
         scaler.transform(val);
-        //end 1.*/
+        //end 1.
 
         System.out.println("train.numExamples() = " + train.numExamples());
         System.out.println("val.numExamples() = " + val.numExamples());
 
-        DataSetIterator train_iter = new ViewIterator(train, batchSize);
-        DataSetIterator val_iter = new ViewIterator(val,batchSize);
+        ViewIterator train_iter = new ViewIterator(train, batchSize);
+        ViewIterator val_iter = new ViewIterator(val,batchSize);
 
-        //2. set preprocessor to iterator
+        /*//2. set preprocessor to iterator
         scaler.fit(train_iter);
         train_iter.setPreProcessor(scaler);
         val_iter.setPreProcessor(scaler);
-        //end 2.
+        //end 2.*/
 
         System.out.println("input column = " + train_iter.inputColumns());
 
@@ -215,17 +178,6 @@ public class Q1_train {
                     .activation(Activation.RELU)
                     .build())
                 .layer(new BatchNormalization())
-
-                /*.layer(new BatchNormalization())
-                .layer( new DenseLayer.Builder()
-                        .nOut(200)
-                        .activation(Activation.RELU)
-                        .build())
-                .layer(new BatchNormalization())
-                .layer( new DenseLayer.Builder()
-                        .nOut(200)
-                        .activation(Activation.RELU)
-                        .build())*/
                 .layer(new OutputLayer.Builder()
                         .activation(Activation.SIGMOID)
                         .lossFunction(LossFunctions.LossFunction.XENT)
@@ -249,16 +201,16 @@ public class Q1_train {
             Evaluation evalTrain = model.evaluate(train_iter);  //validation with training data
             Evaluation evalTest = model.evaluate(val_iter);  //test with testing data
             System.out.println("\nepoch = " + i);
-            System.out.println("Training: " + evalTrain.stats());
-            System.out.println("Validation: " + evalTest.stats());
+            System.out.println("Training: " + evalTrain.accuracy());
+            System.out.println("Validation: " + evalTest.accuracy());
 
         }
 
-        /*Evaluation evalTrain = model.evaluate(train_iter);  //validation with training data
+        Evaluation evalTrain = model.evaluate(train_iter);  //validation with training data
         Evaluation evalTest = model.evaluate(val_iter);  //test with testing data
         System.out.println("Training: " + evalTrain.stats());
         System.out.println("Validation: " + evalTest.stats());
-        //INDArray predict = model.output(test_iter);*/
+        //INDArray predict = model.output(test_iter);
 
         //Save model
         ModelSerializer.writeModel(model, "C:/Users/user/Desktop/Penjana_DLPC/Day11/Q1/model.zip", true);
@@ -266,16 +218,13 @@ public class Q1_train {
         normalizerSerializer.write(scaler, "C:/Users/user/Desktop/Penjana_DLPC/Day11/Q1/normalizer.zip");
 
         //Testing
-        Nd4j.getEnvironment().allowHelpers(false); //required for CPU - concat error
+
         //Convert val dataset to INDArray
         List<List<Writable>> valCollection = RecordConverter.toRecords(val);
         INDArray valArray = RecordConverter.toMatrix(DataType.FLOAT, valCollection);
         INDArray valFeatures = valArray.getColumns(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16);
         //INDArray valFeatures = valArray.getColumns(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,);
 
-
-        train.setLabelNames(Arrays.asList("0", "1"));
-        val.setLabelNames(Arrays.asList("0", "1"));
         List<String> prediction = model.predict(val);
         INDArray output = model.output(valFeatures);
 
@@ -314,3 +263,44 @@ public class Q1_train {
     }
 
 }
+
+/*//ID,age,job,marital,education,default,balance,housing,loan,contact,day,month,duration,campaign,pdays,previous,poutcome,subscribed
+        // define schema
+        Schema sch = new Schema.Builder()
+                .addColumnInteger("ID")
+                .addColumnInteger("age")
+                .addColumnCategorical("job", Arrays.asList("admin.", "blue-collar", "entrepreneur", "housemaid", "management", "retired", "self-employed", "services", "student", "technician", "unemployed", "unknown"))
+                .addColumnCategorical("marital", Arrays.asList("divorced", "married", "single"))
+                .addColumnCategorical("education", Arrays.asList("primary", "secondary", "tertiary", "unknown"))
+                .addColumnCategorical("default", Arrays.asList("no", "yes"))
+                .addColumnInteger("balance")
+                .addColumnCategorical("housing", Arrays.asList("no", "yes"))
+                .addColumnCategorical("loan", Arrays.asList("no", "yes"))
+                .addColumnCategorical("contact", Arrays.asList("cellular", "telephone", "unknown"))
+                .addColumnInteger("day", 1, 31)
+                .addColumnCategorical("month", Arrays.asList("jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"))
+                .addColumnInteger("duration")
+                .addColumnInteger("campaign")
+                .addColumnInteger("pdays")
+                .addColumnInteger("previous")
+                .addColumnCategorical("poutcome", Arrays.asList("failure", "other", "success", "unknown"))
+                .addColumnCategorical("subscribed", Arrays.asList("no", "yes"))
+                .build();*/
+
+ /*//ID,age,job,marital,education,default,balance,housing,loan,contact,day,month,duration,campaign,pdays,previous,poutcome,subscribed
+        TransformProcess tp = new TransformProcess.Builder(sch)
+                .removeColumns("ID", "day", "month")// "duration", "pdays", "campaign", "contact", "poutcome", "default", "previous")  //ignore id and call time
+                .categoricalToOneHot("job")
+                .categoricalToOneHot("marital")
+                .categoricalToOneHot("education")  //ordinal, but unknown??
+                .categoricalToInteger("default")
+                .categoricalToInteger("housing")
+                .categoricalToInteger("loan")
+                .categoricalToOneHot("contact")  //non-ordinal
+                .categoricalToOneHot("poutcome")  //non-ordinal
+
+                //one hot the target
+                .categoricalToInteger("subscribed")  //binary class
+                //filter invalid
+                .filter(new FilterInvalidValues())
+                .build();*/
