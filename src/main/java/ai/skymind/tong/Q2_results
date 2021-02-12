@@ -1,0 +1,105 @@
+"C:\Program Files\Java\jdk1.8.0_281\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.3.1\lib\idea_rt.jar=49217:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.3.1\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\user\AppData\Local\Temp\classpath1310994894.jar ai.certifai.tong.Q2_train
+training numExamples: 63000
+testing numExamples: 7000
+total numExamples: 70000
+2021-02-12 00:38:48 INFO  Nd4jBackend:386 - Loaded [JCublasBackend] backend
+2021-02-12 00:38:50 INFO  NativeOpsHolder:386 - Number of threads used for linear algebra: 32
+2021-02-12 00:38:50 INFO  DefaultOpExecutioner:393 - Backend used: [CUDA]; OS: [Windows 10]
+2021-02-12 00:38:50 INFO  DefaultOpExecutioner:393 - Cores: [12]; Memory: [3.5GB];
+2021-02-12 00:38:50 INFO  DefaultOpExecutioner:386 - Blas vendor: [CUBLAS]
+2021-02-12 00:38:50 INFO  JCublasBackend:403 - ND4J CUDA build version: 10.0.130
+2021-02-12 00:38:50 INFO  JCublasBackend:403 - CUDA device 0: [Quadro P620]; cc: [6.1]; Total memory: [2147483648]
+2021-02-12 00:40:18 INFO  MinMaxStats:382 - NormalizerMinMaxScaler: max val minus min val found to be zero. Transform will round up to epsilon to avoid nans.
+input column = 784
+2021-02-12 00:40:24 INFO  MultiLayerNetwork:403 - Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+Feb 12, 2021 12:40:28 AM io.vertx.core.impl.BlockedThreadChecker
+WARNING: Thread Thread[vert.x-eventloop-thread-0,5,main]=Thread[vert.x-eventloop-thread-0,5,main] has been blocked for 3344 ms, time limit is 2000 ms
+2021-02-12 00:40:28 INFO  VertxUIServer:386 - Deeplearning4j UI server started at: http://localhost:9000
+2021-02-12 00:40:28 INFO  VertxUIServer:386 - StatsStorage instance attached to UI: InMemoryStatsStorage(uid=012d7d2d)
+Feb 12, 2021 12:40:31 AM io.vertx.core.impl.BlockedThreadChecker
+WARNING: Thread Thread[vert.x-eventloop-thread-0,5,main]=Thread[vert.x-eventloop-thread-0,5,main] has been blocked for 2910 ms, time limit is 2000 ms
+2021-02-12 00:40:35 INFO  ScoreIterationListener:393 - Score at iteration 0 is 3.1970288814769177
+
+epoch = 0
+Training accuracy: 0.8880317460317461
+Test  accuracy: 0.8992857142857142
+
+epoch = 1
+Training accuracy: 0.9493015873015873
+Test  accuracy: 0.9541428571428572
+
+epoch = 2
+Training accuracy: 0.9692222222222222
+Test  accuracy: 0.9704285714285714
+Training:
+
+========================Evaluation Metrics========================
+ # of classes:    10
+ Accuracy:        0.9692
+ Precision:       0.9691
+ Recall:          0.9690
+ F1 Score:        0.9690
+Precision, recall & F1: macro-averaged (equally weighted avg. of 10 classes)
+
+
+=========================Confusion Matrix=========================
+    0    1    2    3    4    5    6    7    8    9
+---------------------------------------------------
+ 6010    0   17    7    9   23   31    6   34   10 | 0 = 0
+    0 6907   35   22    9    5    5   26   43   19 | 1 = 1
+   13   13 6105   33   26    4   15   40   36    9 | 2 = 2
+    3    7   51 6248    4   49    3   26   43   28 | 3 = 3
+    2    4   12    5 5933    1   24   12   13  158 | 4 = 4
+   11    3    8   91   22 5418   36    5   48   23 | 5 = 5
+   13   11    5    2   25   38 6099    0   20    1 | 6 = 6
+    3   13   34   16   32    5    2 6385   14   61 | 7 = 7
+   10   23   24   67   15   28   19   11 5889   30 | 8 = 8
+   17    6    7   47   56   14    1   60   27 6067 | 9 = 9
+
+Confusion matrix format: Actual (rowClass) predicted as (columnClass) N times
+==================================================================
+Testing:
+
+========================Evaluation Metrics========================
+ # of classes:    10
+ Accuracy:        0.9704
+ Precision:       0.9700
+ Recall:          0.9702
+ F1 Score:        0.9700
+Precision, recall & F1: macro-averaged (equally weighted avg. of 10 classes)
+
+
+=========================Confusion Matrix=========================
+   0   1   2   3   4   5   6   7   8   9
+-----------------------------------------
+ 737   0   5   3   2   0   5   0   4   0 | 0 = 0
+   0 792   2   0   0   0   1   2   9   0 | 1 = 1
+   4   1 670   3   4   0   4   2   8   0 | 2 = 2
+   2   0   9 641   1   6   0   2  13   5 | 3 = 3
+   0   1   2   0 645   0   2   0   1   9 | 4 = 4
+   1   1   0  10   5 620   7   0   3   1 | 5 = 5
+   0   0   0   0   4   3 655   0   0   0 | 6 = 6
+   0   1   2   1   2   0   0 713   0   9 | 7 = 7
+   1   4   5   7   1   4   2   0 682   3 | 8 = 8
+   1   1   1   2   6   3   0   4   0 638 | 9 = 9
+
+Confusion matrix format: Actual (rowClass) predicted as (columnClass) N times
+==================================================================
+    0    1    2    3    4    5    6    7    8    9
+---------------------------------------------------
+ 6010    0   17    7    9   23   31    6   34   10 | 0 = 0
+    0 6907   35   22    9    5    5   26   43   19 | 1 = 1
+   13   13 6105   33   26    4   15   40   36    9 | 2 = 2
+    3    7   51 6248    4   49    3   26   43   28 | 3 = 3
+    2    4   12    5 5933    1   24   12   13  158 | 4 = 4
+   11    3    8   91   22 5418   36    5   48   23 | 5 = 5
+   13   11    5    2   25   38 6099    0   20    1 | 6 = 6
+    3   13   34   16   32    5    2 6385   14   61 | 7 = 7
+   10   23   24   67   15   28   19   11 5889   30 | 8 = 8
+   17    6    7   47   56   14    1   60   27 6067 | 9 = 9
+
+Confusion matrix format: Actual (rowClass) predicted as (columnClass) N times
+2021-02-12 00:48:43 INFO  VertxUIServer:386 - Deeplearning4j UI server is auto-stopping after thread (name: main) died.
+2021-02-12 00:48:43 INFO  VertxUIServer:382 - Deeplearning4j UI server stopped.
+
+Process finished with exit code 0

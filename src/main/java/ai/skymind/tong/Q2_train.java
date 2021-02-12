@@ -1,13 +1,14 @@
 package ai.skymind.tong;
 
 import org.datavec.api.records.reader.RecordReader;
+import org.datavec.api.records.reader.impl.collection.CollectionRecordReader;
 import org.datavec.api.records.reader.impl.csv.CSVRecordReader;
 import org.datavec.api.split.FileSplit;
-import org.datavec.api.util.ndarray.RecordConverter;
 import org.datavec.api.writable.Writable;
 import org.deeplearning4j.datasets.datavec.RecordReaderDataSetIterator;
 import org.deeplearning4j.nn.conf.MultiLayerConfiguration;
 import org.deeplearning4j.nn.conf.NeuralNetConfiguration;
+import org.deeplearning4j.nn.conf.layers.BatchNormalization;
 import org.deeplearning4j.nn.conf.layers.DenseLayer;
 import org.deeplearning4j.nn.conf.layers.OutputLayer;
 import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
@@ -18,23 +19,22 @@ import org.deeplearning4j.ui.model.stats.StatsListener;
 import org.deeplearning4j.ui.model.storage.InMemoryStatsStorage;
 import org.nd4j.evaluation.classification.Evaluation;
 import org.nd4j.linalg.activations.Activation;
-import org.nd4j.linalg.api.buffer.DataType;
-import org.nd4j.linalg.api.ndarray.INDArray;
-import org.nd4j.linalg.dataset.DataSet;
-import org.nd4j.linalg.dataset.SplitTestAndTrain;
-import org.nd4j.linalg.dataset.ViewIterator;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
 import org.nd4j.linalg.dataset.api.preprocessor.NormalizerMinMaxScaler;
 import org.nd4j.linalg.learning.config.Adam;
 import org.nd4j.linalg.lossfunctions.LossFunctions;
+import org.nd4j.linalg.schedule.MapSchedule;
+import org.nd4j.linalg.schedule.ScheduleType;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Q2_train {
     final static int seed = 1234;
-    final static int batchSize = 100;
+    final static int batchSize = 5000;
     final static int labelIndex = 784;
     final static int numClasses = 10;
     final static int epoch = 5;
@@ -47,37 +47,32 @@ public class Q2_train {
 
         //loop data in
         DataSetIterator iterator = new RecordReaderDataSetIterator(rr, batchSize, labelIndex, numClasses);
-        /*List<List<Writable>> loop = new ArrayList<>();
+        List<List<Writable>> to_train = new ArrayList<>();
+        List<List<Writable>> to_test = new ArrayList<>();
+        //split test-train here because large dataset
+        int j = 0;
         while (rr.hasNext())
         {
-            loop.add(rr.next());
-        }*/
-        DataSet allData = iterator.next();
+            if (j%10 <= 8) to_train.add(rr.next());  //90% train
+            else to_test.add(rr.next());
+            j++;
+        }
+        System.out.println("training numExamples: " + to_train.size());
+        System.out.println("testing numExamples: " + to_test.size());
+        System.out.println("total numExamples: " + (to_train.size() + to_test.size()));
 
-       /* // define schema
-        Schema sch = new Schema.Builder()
-                for (int i=0; i < 784; i++)
-                {
-                    .addColumn
-                }
-                .build();
+        //turn list to collectionRR
+        RecordReader crr1 = new CollectionRecordReader(to_train);
+        RecordReader crr2 = new CollectionRecordReader(to_test);
 
-        System.out.println(sch);
-
-        System.out.println("no. of cols: " + sch.numColumns());
-        System.out.println("col names: " + sch.getColumnNames());
-        System.out.println("col types: " + sch.getColumnTypes());
-
-
-        //split test-train
-        //manipulate training data
-        INDArray features = allData.getFeatures();
-        features.*/
-
-        List<List<Writable>> dataCollection = RecordConverter.toRecords(allData);
-        INDArray dataArray = RecordConverter.toMatrix(DataType.FLOAT, dataCollection);
-
-
+        //turn it into Iterator, now with datasize known, can load altogether or by batchsize
+        DataSetIterator train_iter =  new RecordReaderDataSetIterator(crr1, batchSize, labelIndex, numClasses);
+        DataSetIterator test_iter =  new RecordReaderDataSetIterator(crr2, batchSize, labelIndex, numClasses);
+        /*//now we can split
+        DataSet allData =all_iter.next();
+        System.out.println("allData.numExamples() = " + allData.numExamples());
+        System.out.println("allData.numInputs() = " + allData.numInputs());
+        System.out.println("allData.numOutcomes() = " + allData.numOutcomes());
 
         //manipulate data
         allData.shuffle();
@@ -85,35 +80,52 @@ public class Q2_train {
         SplitTestAndTrain test_train = allData.splitTestAndTrain(0.8);
         DataSet train = test_train.getTrain();
         DataSet test = test_train.getTest();
-        DataSetIterator train_iter = new ViewIterator(train, batchSize);
-        DataSetIterator test_iter = new ViewIterator(test, batchSize);
+
+        System.out.println("train.numExamples() = " + train.numExamples());
+        System.out.println("test.numExamples() = " + test.numExamples());*/
+
 
         //preprocessing
         NormalizerMinMaxScaler scaler = new NormalizerMinMaxScaler(0, 1);
-        scaler.fit(train_iter);  //fit the scaler to training data
+        scaler.fit(train_iter);
+
         //apply for both datasets
         train_iter.setPreProcessor(scaler);
         test_iter.setPreProcessor(scaler);
         System.out.println("input column = " + train_iter.inputColumns());
 
+        HashMap<Integer, Double> schedule = new HashMap<>();
+        schedule.put(0, 1e-3);
+        schedule.put(8, 1e-4);
+        //schedule.put(, 1e-5);
+
         //setting model config
         MultiLayerConfiguration config = new NeuralNetConfiguration.Builder()
                 .seed(seed)
-                .updater(new Adam())  //optimizer
+                .updater(new Adam(new MapSchedule(ScheduleType.EPOCH, schedule)))  //optimizer
                 .weightInit(WeightInit.XAVIER)  //weight initialization
                 .activation(Activation.RELU)  //default activation function
+                .l2(0.001)
                 .list()
                 .layer(new DenseLayer.Builder()  //input layer
                         .nIn(train_iter.inputColumns())  //specify the no. of examples in training data
-                        .nOut(124)
+                        .nOut(224)
                         .build())
+                .layer(new BatchNormalization())
                 .layer(new DenseLayer.Builder()  //hidden layer 1
                         .nOut(282)
+                        .build())
+                .layer(new BatchNormalization())
+                .layer(new DenseLayer.Builder()  //hidden layer 1
+                        .nOut(424)
+                        .build())
+                .layer(new DenseLayer.Builder()  //hidden layer 1
+                        .nOut(512)
                         .build())
                 .layer(new OutputLayer.Builder()  //output layer
                         .lossFunction(LossFunctions.LossFunction.MCXENT)  //multiclass cross-entropy loss
                         .activation(Activation.SOFTMAX)
-                        .nOut(10)  //specifiy the class nunmber for datasets
+                        .nOut(train_iter.totalOutcomes())  //specifiy the class nunmber for datasets
                         .build())
                 .build();
 
@@ -127,14 +139,15 @@ public class Q2_train {
         model.setListeners(new StatsListener(storage), new ScoreIterationListener(1000));  //print per 1000 iteration
 
         //training model
-        int epoch = 10;
+        int epoch = 3;
         for (int i = 0; i < epoch; ++i)
         {
             model.fit(train_iter);
             Evaluation evalTrain = model.evaluate(train_iter);  //validation with training data
-            Evaluation evalTest = model.evaluate(test_iter);  //test with testing data
             System.out.println("\nepoch = " + i);
             System.out.println("Training accuracy: " + evalTrain.accuracy());
+            Evaluation evalTest = model.evaluate(test_iter);  //test with testing data
+
             System.out.println("Test  accuracy: " + evalTest.accuracy());
 
         }
@@ -145,6 +158,6 @@ public class Q2_train {
         System.out.println("Testing: " + evalTest.stats());
 
 
-        System.out.println(evalTest.confusionMatrix());
+        System.out.println(evalTrain.confusionMatrix());
     }
 }

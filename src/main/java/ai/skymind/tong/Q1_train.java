@@ -151,6 +151,9 @@ public class Q1_train {
         //manipulate training data
         allData.shuffle();
         //split for validation
+        System.out.println("allData.numInputs() = " + allData.numInputs());
+        System.out.println("allData.numOutcomes() = " + allData.numOutcomes());
+
         //total == 31647 data
         SplitTestAndTrain test_train = allData.splitTestAndTrain(0.8);
         DataSet train = test_train.getTrain();
@@ -160,11 +163,11 @@ public class Q1_train {
         DataNormalization scaler = new NormalizerMinMaxScaler(0, 1);
 
 
-        //1. apply scaler to DataSet
+        /*//1. apply scaler to DataSet
         scaler.fit(train);
         scaler.transform(train);
         scaler.transform(val);
-        //end 1.
+        //end 1.*/
 
         System.out.println("train.numExamples() = " + train.numExamples());
         System.out.println("val.numExamples() = " + val.numExamples());
@@ -172,11 +175,11 @@ public class Q1_train {
         DataSetIterator train_iter = new ViewIterator(train, batchSize);
         DataSetIterator val_iter = new ViewIterator(val,batchSize);
 
-        /*//2. set preprocessor to iterator
+        //2. set preprocessor to iterator
         scaler.fit(train_iter);
         train_iter.setPreProcessor(scaler);
         val_iter.setPreProcessor(scaler);
-        //end 2.*/
+        //end 2.
 
         System.out.println("input column = " + train_iter.inputColumns());
 
