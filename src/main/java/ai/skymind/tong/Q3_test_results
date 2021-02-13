@@ -1,0 +1,26 @@
+using inference
+Test:
+
+========================Evaluation Metrics========================
+ # of classes:    6
+ Accuracy:        0.7930
+ Precision:       0.7946
+ Recall:          0.7934
+ F1 Score:        0.7936
+Precision, recall & F1: macro-averaged (equally weighted avg. of 6 classes)
+
+
+=========================Confusion Matrix=========================
+   0   1   2   3   4   5
+-------------------------
+ 320   9  12  21  15  60 | 0 = buildings
+   8 430   4   3   1  28 | 1 = forest
+   6   5 434  57  46   5 | 2 = glacier
+   8   3  73 376  63   2 | 3 = mountain
+  15   4  34  35 422   0 | 4 = sea
+  68  16  10   3   7 397 | 5 = street
+
+Confusion matrix format: Actual (rowClass) predicted as (columnClass) N times
+==================================================================
+
+no sign of data mismatch, gotta improve training error first
