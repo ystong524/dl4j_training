@@ -480,5 +480,861 @@ Process finished with exit code 0
 ImagePreProcessingScaler(0, 1);
 
 
+2021-02-12 15:26:25 INFO  ScoreIterationListener:393 - Score at iteration 0 is 1.7643402099609375
+2021-02-12 15:27:56 INFO  ScoreIterationListener:393 - Score at iteration 500 is 1.2720466613769532
+2021-02-12 15:29:28 INFO  ScoreIterationListener:393 - Score at iteration 1000 is 1.1306041717529296
+
+epoch = 0
+Training accuracy: 0.47694209375297136
+Validation  accuracy: 0.4766070749334348
+2021-02-12 15:31:33 INFO  ScoreIterationListener:393 - Score at iteration 1500 is 1.4294861793518066
+2021-02-12 15:33:07 INFO  ScoreIterationListener:393 - Score at iteration 2000 is 0.9178338050842285
+
+epoch = 1
+Training accuracy: 0.6726252733669298
+Validation  accuracy: 0.6622289844047167
+2021-02-12 15:35:11 INFO  ScoreIterationListener:393 - Score at iteration 2500 is 0.8803126335144043
+2021-02-12 15:36:49 INFO  ScoreIterationListener:393 - Score at iteration 3000 is 0.6118739128112793
+
+epoch = 2
+Training accuracy: 0.6987734144718075
+Validation  accuracy: 0.6850513503233169
+2021-02-12 15:38:55 INFO  ScoreIterationListener:393 - Score at iteration 3500 is 0.7383495807647705
+2021-02-12 15:40:32 INFO  ScoreIterationListener:393 - Score at iteration 4000 is 0.9374805450439453
+
+epoch = 3
+Training accuracy: 0.6650185414091471
+Validation  accuracy: 0.6553822746291366
+2021-02-12 15:42:39 INFO  ScoreIterationListener:393 - Score at iteration 4500 is 0.6739229679107666
+2021-02-12 15:44:17 INFO  ScoreIterationListener:393 - Score at iteration 5000 is 0.3787792205810547
+
+epoch = 4
+Training accuracy: 0.6696776647332889
+Validation  accuracy: 0.6470140737923165
+2021-02-12 15:46:26 INFO  ScoreIterationListener:393 - Score at iteration 5500 is 0.755762243270874
+2021-02-12 15:48:02 INFO  ScoreIterationListener:393 - Score at iteration 6000 is 1.0091666221618651
+
+epoch = 5
+Training accuracy: 0.7103736807074261
+Validation  accuracy: 0.6907569418029669
+2021-02-12 15:50:08 INFO  ScoreIterationListener:393 - Score at iteration 6500 is 0.6339838027954101
+2021-02-12 15:51:44 INFO  ScoreIterationListener:393 - Score at iteration 7000 is 0.6897406101226806
+
+epoch = 6
+Training accuracy: 0.771512788818104
+Validation  accuracy: 0.7523773297831875
+2021-02-12 15:53:53 INFO  ScoreIterationListener:393 - Score at iteration 7500 is 1.1926774978637695
+2021-02-12 15:55:30 INFO  ScoreIterationListener:393 - Score at iteration 8000 is 0.5629416465759277
+
+epoch = 7
+Training accuracy: 0.7340496339260245
+Validation  accuracy: 0.7383035374667174
+2021-02-12 15:57:38 INFO  ScoreIterationListener:393 - Score at iteration 8500 is 0.3913357973098755
+2021-02-12 15:59:16 INFO  ScoreIterationListener:393 - Score at iteration 9000 is 0.7103411197662354
+
+epoch = 8
+Training accuracy: 0.8003232861082058
+Validation  accuracy: 0.7831875237732978
+2021-02-12 16:01:26 INFO  ScoreIterationListener:393 - Score at iteration 9500 is 0.887752914428711
+2021-02-12 16:03:04 INFO  ScoreIterationListener:393 - Score at iteration 10000 is 0.20732691287994384
+2021-02-12 16:04:42 INFO  ScoreIterationListener:393 - Score at iteration 10500 is 0.7247568130493164
+
+epoch = 9
+Training accuracy: 0.8043168203860417
+Validation  accuracy: 0.7828071510079878
+2021-02-12 16:06:50 INFO  ScoreIterationListener:393 - Score at iteration 11000 is 1.0222761154174804
+2021-02-12 16:08:30 INFO  ScoreIterationListener:393 - Score at iteration 11500 is 0.4867743492126465
+
+epoch = 10
+Training accuracy: 0.8135399828848531
+Validation  accuracy: 0.7839482693039178
+2021-02-12 16:10:43 INFO  ScoreIterationListener:393 - Score at iteration 12000 is 0.41857404708862306
+2021-02-12 16:12:25 INFO  ScoreIterationListener:393 - Score at iteration 12500 is 0.2381756544113159
+
+epoch = 11
+Training accuracy: 0.8186745269563563
+Validation  accuracy: 0.7926968429060479
+2021-02-12 16:14:39 INFO  ScoreIterationListener:393 - Score at iteration 13000 is 0.994434928894043
+2021-02-12 16:16:22 INFO  ScoreIterationListener:393 - Score at iteration 13500 is 0.17610013484954834
+
+epoch = 12
+Training accuracy: 0.8184843586574118
+Validation  accuracy: 0.7923164701407379
+2021-02-12 16:18:36 INFO  ScoreIterationListener:393 - Score at iteration 14000 is 1.6736557006835937
+2021-02-12 16:20:18 INFO  ScoreIterationListener:393 - Score at iteration 14500 is 0.13950977325439454
+
+epoch = 13
+Training accuracy: 0.8243795759246934
+Validation  accuracy: 0.7945987067325979
+2021-02-12 16:22:32 INFO  ScoreIterationListener:393 - Score at iteration 15000 is 0.08940209746360779
+2021-02-12 16:24:14 INFO  ScoreIterationListener:393 - Score at iteration 15500 is 0.18943994045257567
+
+epoch = 14
+Training accuracy: 0.820576209945802
+Validation  accuracy: 0.7961201977938379
+2021-02-12 16:26:28 INFO  ScoreIterationListener:393 - Score at iteration 16000 is 0.29416661262512206
+2021-02-12 16:28:11 INFO  ScoreIterationListener:393 - Score at iteration 16500 is 1.1112378120422364
+
+epoch = 15
+Training accuracy: 0.821907388038414
+Validation  accuracy: 0.7945987067325979
+2021-02-12 16:30:24 INFO  ScoreIterationListener:393 - Score at iteration 17000 is 1.0032233238220214
+2021-02-12 16:32:08 INFO  ScoreIterationListener:393 - Score at iteration 17500 is 0.28168644905090334
+
+epoch = 16
+Training accuracy: 0.8245697442236379
+Validation  accuracy: 0.7953594522632179
+2021-02-12 16:34:22 INFO  ScoreIterationListener:393 - Score at iteration 18000 is 0.36665384769439696
+2021-02-12 16:36:05 INFO  ScoreIterationListener:393 - Score at iteration 18500 is 0.7052897930145263
+
+epoch = 17
+Training accuracy: 0.823238566131026
+Validation  accuracy: 0.796880943324458
+2021-02-12 16:38:18 INFO  ScoreIterationListener:393 - Score at iteration 19000 is 0.5086330890655517
+2021-02-12 16:40:01 INFO  ScoreIterationListener:393 - Score at iteration 19500 is 0.3629716396331787
+
+epoch = 18
+Training accuracy: 0.8238090710278596
+Validation  accuracy: 0.7957398250285279
+2021-02-12 16:42:14 INFO  ScoreIterationListener:393 - Score at iteration 20000 is 0.3336020946502686
+2021-02-12 16:43:56 INFO  ScoreIterationListener:393 - Score at iteration 20500 is 0.6888451099395752
+2021-02-12 16:45:39 INFO  ScoreIterationListener:393 - Score at iteration 21000 is 0.38145813941955564
+
+epoch = 19
+Training accuracy: 0.8236189027289151
+Validation  accuracy: 0.7938379612019779
+
+Training:
+
+========================Evaluation Metrics========================
+ # of classes:    6
+ Accuracy:        0.8250
+ Precision:       0.8244
+ Recall:          0.8250
+ F1 Score:        0.8246
+Precision, recall & F1: macro-averaged (equally weighted avg. of 6 classes)
+
+
+=========================Confusion Matrix=========================
+    0    1    2    3    4    5
+-------------------------------
+ 1351   53   33   48   64  204 | 0 = buildings
+   22 1659    3   16    8   44 | 1 = forest
+   32   17 1381  183  126   14 | 2 = glacier
+   37    4  207 1368  126   11 | 3 = mountain
+   68    9   93  123 1442   18 | 4 = sea
+  168   57   13   14   26 1475 | 5 = street
+
+Confusion matrix format: Actual (rowClass) predicted as (columnClass) N times
+==================================================================
+Test:
+
+========================Evaluation Metrics========================
+ # of classes:    6
+ Accuracy:        0.7938
+ Precision:       0.7933
+ Recall:          0.7938
+ F1 Score:        0.7935
+Precision, recall & F1: macro-averaged (equally weighted avg. of 6 classes)
+
+
+=========================Confusion Matrix=========================
+   0   1   2   3   4   5
+-------------------------
+ 317  13   7  16  16  69 | 0 = buildings
+  10 408   0   5   2  14 | 1 = forest
+  11   9 337  61  16   4 | 2 = glacier
+  15   4  49 326  43   1 | 3 = mountain
+  16   2  25  35 358   2 | 4 = sea
+  62  16   5   5   9 341 | 5 = street
+
+Confusion matrix format: Actual (rowClass) predicted as (columnClass) N times
+==================================================================
+2021-02-12 16:46:48 INFO  VertxUIServer:386 - Deeplearning4j UI server is auto-stopping after thread (name: main) died.
+2021-02-12 16:46:48 INFO  VertxUIServer:382 - Deeplearning4j UI server stopped.
+
+Process finished with exit code 0
+
+
+4: change epoch = 100
+
+"C:\Program Files\Java\jdk1.8.0_281\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.3.1\lib\idea_rt.jar=58893:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.3.1\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\user\AppData\Local\Temp\classpath1837526725.jar ai.certifai.tong.Q3_train
+2021-02-12 20:59:42 INFO  Nd4jBackend:386 - Loaded [JCublasBackend] backend
+2021-02-12 20:59:45 INFO  NativeOpsHolder:386 - Number of threads used for linear algebra: 32
+2021-02-12 20:59:45 INFO  DefaultOpExecutioner:393 - Backend used: [CUDA]; OS: [Windows 10]
+2021-02-12 20:59:45 INFO  DefaultOpExecutioner:393 - Cores: [12]; Memory: [3.5GB];
+2021-02-12 20:59:45 INFO  DefaultOpExecutioner:386 - Blas vendor: [CUBLAS]
+2021-02-12 20:59:45 INFO  JCublasBackend:403 - ND4J CUDA build version: 10.0.130
+2021-02-12 20:59:45 INFO  JCublasBackend:403 - CUDA device 0: [Quadro P620]; cc: [6.1]; Total memory: [2147483648]
+2021-02-12 20:59:45 INFO  BaseImageRecordReader:393 - ImageRecordReader: 6 label classes inferred using label generator ParentPathLabelGenerator
+2021-02-12 20:59:45 INFO  BaseImageRecordReader:393 - ImageRecordReader: 6 label classes inferred using label generator ParentPathLabelGenerator
+No. of classes = 6
+2021-02-12 20:59:45 INFO  MultiLayerNetwork:403 - Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+2021-02-12 20:59:47 INFO  VertxUIServer:386 - Deeplearning4j UI server started at: http://localhost:9000
+2021-02-12 20:59:47 INFO  VertxUIServer:386 - StatsStorage instance attached to UI: InMemoryStatsStorage(uid=24fc9a79)
+2021-02-12 20:59:48 INFO  ScoreIterationListener:393 - Score at iteration 0 is 1.7643402099609375
+2021-02-12 21:01:54 INFO  ScoreIterationListener:393 - Score at iteration 500 is 1.2964700698852538
+2021-02-12 21:03:27 INFO  ScoreIterationListener:393 - Score at iteration 1000 is 1.2270265579223634
+
+epoch = 0
+Training accuracy: 0.5853380241513739
+Validation  accuracy: 0.5713198934956257
+2021-02-12 21:07:56 INFO  ScoreIterationListener:393 - Score at iteration 1500 is 1.3655852317810058
+2021-02-12 21:09:44 INFO  ScoreIterationListener:393 - Score at iteration 2000 is 1.0707073211669922
+
+epoch = 1
+Training accuracy: 0.6543691166682514
+Validation  accuracy: 0.6401673640167364
+2021-02-12 21:14:15 INFO  ScoreIterationListener:393 - Score at iteration 2500 is 0.9024913787841797
+2021-02-12 21:16:03 INFO  ScoreIterationListener:393 - Score at iteration 3000 is 0.8653558731079102
+
+epoch = 2
+Training accuracy: 0.6981078254255015
+Validation  accuracy: 0.696842906047927
+2021-02-12 21:20:35 INFO  ScoreIterationListener:393 - Score at iteration 3500 is 1.0479198455810548
+2021-02-12 21:22:23 INFO  ScoreIterationListener:393 - Score at iteration 4000 is 0.6399349212646485
+
+epoch = 3
+Training accuracy: 0.7043833792906723
+Validation  accuracy: 0.697603651578547
+2021-02-12 21:26:55 INFO  ScoreIterationListener:393 - Score at iteration 4500 is 0.6074449062347412
+2021-02-12 21:28:44 INFO  ScoreIterationListener:393 - Score at iteration 5000 is 0.6026748180389404
+
+epoch = 4
+Training accuracy: 0.723114956736712
+Validation  accuracy: 0.7143400532521872
+2021-02-12 21:33:16 INFO  ScoreIterationListener:393 - Score at iteration 5500 is 0.8206053733825683
+2021-02-12 21:35:04 INFO  ScoreIterationListener:393 - Score at iteration 6000 is 0.4735563278198242
+
+epoch = 5
+Training accuracy: 0.7344299705239137
+Validation  accuracy: 0.7223278813236972
+2021-02-12 21:39:37 INFO  ScoreIterationListener:393 - Score at iteration 6500 is 0.5050403594970703
+2021-02-12 21:41:28 INFO  ScoreIterationListener:393 - Score at iteration 7000 is 0.614539909362793
+
+epoch = 6
+Training accuracy: 0.6941142911476657
+Validation  accuracy: 0.6850513503233169
+2021-02-12 21:45:31 INFO  ScoreIterationListener:393 - Score at iteration 7500 is 0.9618310928344727
+2021-02-12 21:47:08 INFO  ScoreIterationListener:393 - Score at iteration 8000 is 0.443896484375
+
+epoch = 7
+Training accuracy: 0.7759817438433013
+Validation  accuracy: 0.7546595663750475
+2021-02-12 21:49:14 INFO  ScoreIterationListener:393 - Score at iteration 8500 is 0.4257502555847168
+2021-02-12 21:50:52 INFO  ScoreIterationListener:393 - Score at iteration 9000 is 0.6936930656433106
+
+epoch = 8
+Training accuracy: 0.796044499381953
+Validation  accuracy: 0.7748193229364777
+2021-02-12 21:52:58 INFO  ScoreIterationListener:393 - Score at iteration 9500 is 0.9489058494567871
+2021-02-12 21:54:36 INFO  ScoreIterationListener:393 - Score at iteration 10000 is 0.5844668388366699
+2021-02-12 21:56:13 INFO  ScoreIterationListener:393 - Score at iteration 10500 is 0.5747393131256103
+
+epoch = 9
+Training accuracy: 0.8053627460302367
+Validation  accuracy: 0.7767211867630278
+2021-02-12 21:58:19 INFO  ScoreIterationListener:393 - Score at iteration 11000 is 0.6749082565307617
+2021-02-12 21:59:56 INFO  ScoreIterationListener:393 - Score at iteration 11500 is 0.4929337978363037
+
+epoch = 10
+Training accuracy: 0.8133498145859085
+Validation  accuracy: 0.7869912514263979
+2021-02-12 22:02:03 INFO  ScoreIterationListener:393 - Score at iteration 12000 is 0.2358391284942627
+2021-02-12 22:03:40 INFO  ScoreIterationListener:393 - Score at iteration 12500 is 0.2683396339416504
+
+epoch = 11
+Training accuracy: 0.8159170866216602
+Validation  accuracy: 0.7915557246101179
+2021-02-12 22:05:47 INFO  ScoreIterationListener:393 - Score at iteration 13000 is 0.8574954986572265
+2021-02-12 22:07:24 INFO  ScoreIterationListener:393 - Score at iteration 13500 is 0.24125869274139405
+
+epoch = 12
+Training accuracy: 0.8185794428068841
+Validation  accuracy: 0.7945987067325979
+2021-02-12 22:09:31 INFO  ScoreIterationListener:393 - Score at iteration 14000 is 1.6429546356201172
+2021-02-12 22:11:09 INFO  ScoreIterationListener:393 - Score at iteration 14500 is 0.17088046073913574
+
+epoch = 13
+Training accuracy: 0.821907388038414
+Validation  accuracy: 0.7907949790794979
+2021-02-12 22:13:15 INFO  ScoreIterationListener:393 - Score at iteration 15000 is 0.1078721523284912
+2021-02-12 22:14:52 INFO  ScoreIterationListener:393 - Score at iteration 15500 is 0.16461493968963622
+
+epoch = 14
+Training accuracy: 0.8191499477037177
+Validation  accuracy: 0.7942183339672879
+2021-02-12 22:16:59 INFO  ScoreIterationListener:393 - Score at iteration 16000 is 0.2591288089752197
+2021-02-12 22:18:36 INFO  ScoreIterationListener:393 - Score at iteration 16500 is 0.9762432098388671
+
+epoch = 15
+Training accuracy: 0.8215270514405248
+Validation  accuracy: 0.7930772156713579
+2021-02-12 22:20:42 INFO  ScoreIterationListener:393 - Score at iteration 17000 is 0.8811544418334961
+2021-02-12 22:22:20 INFO  ScoreIterationListener:393 - Score at iteration 17500 is 0.36595613956451417
+
+epoch = 16
+Training accuracy: 0.821907388038414
+Validation  accuracy: 0.7926968429060479
+2021-02-12 22:24:26 INFO  ScoreIterationListener:393 - Score at iteration 18000 is 0.13073923587799072
+2021-02-12 22:26:03 INFO  ScoreIterationListener:393 - Score at iteration 18500 is 1.0544369697570801
+
+epoch = 17
+Training accuracy: 0.8240943234762765
+Validation  accuracy: 0.7945987067325979
+2021-02-12 22:28:09 INFO  ScoreIterationListener:393 - Score at iteration 19000 is 0.33799080848693847
+2021-02-12 22:29:47 INFO  ScoreIterationListener:393 - Score at iteration 19500 is 0.40665535926818847
+
+epoch = 18
+Training accuracy: 0.8196253684510793
+Validation  accuracy: 0.7930772156713579
+2021-02-12 22:31:53 INFO  ScoreIterationListener:393 - Score at iteration 20000 is 0.45877680778503416
+2021-02-12 22:33:31 INFO  ScoreIterationListener:393 - Score at iteration 20500 is 0.718913221359253
+2021-02-12 22:35:09 INFO  ScoreIterationListener:393 - Score at iteration 21000 is 0.23014721870422364
+
+epoch = 19
+Training accuracy: 0.8239992393268042
+Validation  accuracy: 0.796880943324458
+2021-02-12 22:37:15 INFO  ScoreIterationListener:393 - Score at iteration 21500 is 0.2309805154800415
+2021-02-12 22:38:52 INFO  ScoreIterationListener:393 - Score at iteration 22000 is 0.8047725677490234
+
+epoch = 20
+Training accuracy: 0.8245697442236379
+Validation  accuracy: 0.7919360973754279
+2021-02-12 22:40:59 INFO  ScoreIterationListener:393 - Score at iteration 22500 is 0.5281389236450196
+2021-02-12 22:42:36 INFO  ScoreIterationListener:393 - Score at iteration 23000 is 0.690813398361206
+
+epoch = 21
+Training accuracy: 0.8255205857183607
+Validation  accuracy: 0.7953594522632179
+2021-02-12 22:44:42 INFO  ScoreIterationListener:393 - Score at iteration 23500 is 0.35523018836975095
+2021-02-12 22:46:20 INFO  ScoreIterationListener:393 - Score at iteration 24000 is 0.3708923816680908
+
+epoch = 22
+Training accuracy: 0.8227631453836646
+Validation  accuracy: 0.7942183339672879
+2021-02-12 22:48:26 INFO  ScoreIterationListener:393 - Score at iteration 24500 is 0.29774999618530273
+2021-02-12 22:50:04 INFO  ScoreIterationListener:393 - Score at iteration 25000 is 0.7048843383789063
+
+epoch = 23
+Training accuracy: 0.8244746600741656
+Validation  accuracy: 0.7965005705591479
+2021-02-12 22:52:11 INFO  ScoreIterationListener:393 - Score at iteration 25500 is 0.3414469242095947
+2021-02-12 22:53:48 INFO  ScoreIterationListener:393 - Score at iteration 26000 is 0.424039888381958
+
+epoch = 24
+Training accuracy: 0.8280878577541124
+Validation  accuracy: 0.7942183339672879
+2021-02-12 22:55:55 INFO  ScoreIterationListener:393 - Score at iteration 26500 is 0.7241500377655029
+2021-02-12 22:57:32 INFO  ScoreIterationListener:393 - Score at iteration 27000 is 0.3797960042953491
+
+epoch = 25
+Training accuracy: 0.8246648283731102
+Validation  accuracy: 0.7942183339672879
+2021-02-12 22:59:39 INFO  ScoreIterationListener:393 - Score at iteration 27500 is 0.2626208782196045
+2021-02-12 23:01:16 INFO  ScoreIterationListener:393 - Score at iteration 28000 is 0.23176882266998292
+
+epoch = 26
+Training accuracy: 0.829609204145669
+Validation  accuracy: 0.7923164701407379
+2021-02-12 23:03:22 INFO  ScoreIterationListener:393 - Score at iteration 28500 is 0.3842637300491333
+2021-02-12 23:05:00 INFO  ScoreIterationListener:393 - Score at iteration 29000 is 0.3758836030960083
+
+epoch = 27
+Training accuracy: 0.8281829419035847
+Validation  accuracy: 0.7926968429060479
+2021-02-12 23:07:06 INFO  ScoreIterationListener:393 - Score at iteration 29500 is 0.29183330535888674
+2021-02-12 23:08:44 INFO  ScoreIterationListener:393 - Score at iteration 30000 is 0.49218082427978516
+2021-02-12 23:10:21 INFO  ScoreIterationListener:393 - Score at iteration 30500 is 0.21266303062438965
+
+epoch = 28
+Training accuracy: 0.8193401160026623
+Validation  accuracy: 0.7934575884366679
+2021-02-12 23:12:28 INFO  ScoreIterationListener:393 - Score at iteration 31000 is 0.4303282737731934
+2021-02-12 23:14:06 INFO  ScoreIterationListener:393 - Score at iteration 31500 is 0.4133279323577881
+
+epoch = 29
+Training accuracy: 0.8207663782447466
+Validation  accuracy: 0.7953594522632179
+2021-02-12 23:16:12 INFO  ScoreIterationListener:393 - Score at iteration 32000 is 0.15133447647094728
+2021-02-12 23:17:49 INFO  ScoreIterationListener:393 - Score at iteration 32500 is 0.8352052688598632
+
+epoch = 30
+Training accuracy: 0.8234287344299706
+Validation  accuracy: 0.7957398250285279
+2021-02-12 23:19:56 INFO  ScoreIterationListener:393 - Score at iteration 33000 is 0.32662262916564944
+2021-02-12 23:21:33 INFO  ScoreIterationListener:393 - Score at iteration 33500 is 0.7089446544647217
+
+epoch = 31
+Training accuracy: 0.8316059712845869
+Validation  accuracy: 0.7942183339672879
+2021-02-12 23:23:40 INFO  ScoreIterationListener:393 - Score at iteration 34000 is 0.29379475116729736
+2021-02-12 23:25:17 INFO  ScoreIterationListener:393 - Score at iteration 34500 is 0.3977680683135986
+
+epoch = 32
+Training accuracy: 0.8278026053056955
+Validation  accuracy: 0.7945987067325979
+2021-02-12 23:27:24 INFO  ScoreIterationListener:393 - Score at iteration 35000 is 0.1707277774810791
+2021-02-12 23:29:01 INFO  ScoreIterationListener:393 - Score at iteration 35500 is 0.32716832160949705
+
+epoch = 33
+Training accuracy: 0.8270419321099173
+Validation  accuracy: 0.7923164701407379
+2021-02-12 23:31:08 INFO  ScoreIterationListener:393 - Score at iteration 36000 is 0.775658369064331
+2021-02-12 23:32:45 INFO  ScoreIterationListener:393 - Score at iteration 36500 is 0.6504240989685058
+
+epoch = 34
+Training accuracy: 0.8266615955120281
+Validation  accuracy: 0.7934575884366679
+2021-02-12 23:34:52 INFO  ScoreIterationListener:393 - Score at iteration 37000 is 0.23478283882141113
+2021-02-12 23:36:29 INFO  ScoreIterationListener:393 - Score at iteration 37500 is 0.48221168518066404
+
+epoch = 35
+Training accuracy: 0.8257107540173053
+Validation  accuracy: 0.7926968429060479
+2021-02-12 23:38:35 INFO  ScoreIterationListener:393 - Score at iteration 38000 is 0.15471653938293456
+2021-02-12 23:40:13 INFO  ScoreIterationListener:393 - Score at iteration 38500 is 0.3933118343353271
+
+epoch = 36
+Training accuracy: 0.8292288675477798
+Validation  accuracy: 0.7953594522632179
+2021-02-12 23:42:19 INFO  ScoreIterationListener:393 - Score at iteration 39000 is 0.24884648323059083
+2021-02-12 23:43:57 INFO  ScoreIterationListener:393 - Score at iteration 39500 is 0.647920799255371
+
+epoch = 37
+Training accuracy: 0.828278026053057
+Validation  accuracy: 0.7953594522632179
+2021-02-12 23:46:03 INFO  ScoreIterationListener:393 - Score at iteration 40000 is 0.3552293300628662
+2021-02-12 23:47:41 INFO  ScoreIterationListener:393 - Score at iteration 40500 is 0.40897493362426757
+2021-02-12 23:49:18 INFO  ScoreIterationListener:393 - Score at iteration 41000 is 0.22217931747436523
+
+epoch = 38
+Training accuracy: 0.8317961395835314
+Validation  accuracy: 0.7949790794979079
+2021-02-12 23:51:25 INFO  ScoreIterationListener:393 - Score at iteration 41500 is 0.39679317474365233
+2021-02-12 23:53:03 INFO  ScoreIterationListener:393 - Score at iteration 42000 is 0.4346134185791016
+
+epoch = 39
+Training accuracy: 0.8298944565940858
+Validation  accuracy: 0.7957398250285279
+2021-02-12 23:55:10 INFO  ScoreIterationListener:393 - Score at iteration 42500 is 0.24780030250549318
+2021-02-12 23:56:47 INFO  ScoreIterationListener:393 - Score at iteration 43000 is 0.2776921033859253
+
+epoch = 40
+Training accuracy: 0.8309403822382809
+Validation  accuracy: 0.7915557246101179
+2021-02-12 23:58:54 INFO  ScoreIterationListener:393 - Score at iteration 43500 is 0.4775546073913574
+2021-02-13 00:00:32 INFO  ScoreIterationListener:393 - Score at iteration 44000 is 0.35445666313171387
+
+epoch = 41
+Training accuracy: 0.8333174859750879
+Validation  accuracy: 0.7934575884366679
+2021-02-13 00:02:38 INFO  ScoreIterationListener:393 - Score at iteration 44500 is 0.12964247465133666
+2021-02-13 00:04:16 INFO  ScoreIterationListener:393 - Score at iteration 45000 is 0.18112003803253174
+
+epoch = 42
+Training accuracy: 0.829323951697252
+Validation  accuracy: 0.7919360973754279
+2021-02-13 00:06:22 INFO  ScoreIterationListener:393 - Score at iteration 45500 is 0.3018468379974365
+2021-02-13 00:08:00 INFO  ScoreIterationListener:393 - Score at iteration 46000 is 0.28103151321411135
+
+epoch = 43
+Training accuracy: 0.8338879908719217
+Validation  accuracy: 0.7961201977938379
+2021-02-13 00:10:06 INFO  ScoreIterationListener:393 - Score at iteration 46500 is 0.2330472469329834
+2021-02-13 00:11:44 INFO  ScoreIterationListener:393 - Score at iteration 47000 is 0.321277117729187
+
+epoch = 44
+Training accuracy: 0.8279927736046401
+Validation  accuracy: 0.7949790794979079
+2021-02-13 00:13:50 INFO  ScoreIterationListener:393 - Score at iteration 47500 is 0.43948917388916015
+2021-02-13 00:15:28 INFO  ScoreIterationListener:393 - Score at iteration 48000 is 0.19910823106765746
+
+epoch = 45
+Training accuracy: 0.8284681943520015
+Validation  accuracy: 0.7949790794979079
+2021-02-13 00:17:34 INFO  ScoreIterationListener:393 - Score at iteration 48500 is 0.16368380784988404
+2021-02-13 00:19:11 INFO  ScoreIterationListener:393 - Score at iteration 49000 is 0.8555314064025878
+
+epoch = 46
+Training accuracy: 0.8323666444803651
+Validation  accuracy: 0.7965005705591479
+2021-02-13 00:21:18 INFO  ScoreIterationListener:393 - Score at iteration 49500 is 0.5618224143981934
+2021-02-13 00:22:56 INFO  ScoreIterationListener:393 - Score at iteration 50000 is 0.4708615779876709
+
+epoch = 47
+Training accuracy: 0.8340781591708663
+Validation  accuracy: 0.7953594522632179
+2021-02-13 00:25:03 INFO  ScoreIterationListener:393 - Score at iteration 50500 is 0.8161778450012207
+2021-02-13 00:26:40 INFO  ScoreIterationListener:393 - Score at iteration 51000 is 0.4679511547088623
+2021-02-13 00:28:18 INFO  ScoreIterationListener:393 - Score at iteration 51500 is 0.12453101873397827
+
+epoch = 48
+Training accuracy: 0.8345535799182277
+Validation  accuracy: 0.796880943324458
+2021-02-13 00:30:24 INFO  ScoreIterationListener:393 - Score at iteration 52000 is 0.447125768661499
+2021-02-13 00:32:02 INFO  ScoreIterationListener:393 - Score at iteration 52500 is 0.3431234836578369
+
+epoch = 49
+Training accuracy: 0.8340781591708663
+Validation  accuracy: 0.7942183339672879
+2021-02-13 00:34:08 INFO  ScoreIterationListener:393 - Score at iteration 53000 is 0.3882191896438599
+2021-02-13 00:35:45 INFO  ScoreIterationListener:393 - Score at iteration 53500 is 0.5605654716491699
+
+epoch = 50
+Training accuracy: 0.831986307882476
+Validation  accuracy: 0.796880943324458
+2021-02-13 00:37:51 INFO  ScoreIterationListener:393 - Score at iteration 54000 is 0.808350944519043
+2021-02-13 00:39:29 INFO  ScoreIterationListener:393 - Score at iteration 54500 is 0.3605481147766113
+
+epoch = 51
+Training accuracy: 0.83132071883617
+Validation  accuracy: 0.7949790794979079
+2021-02-13 00:41:35 INFO  ScoreIterationListener:393 - Score at iteration 55000 is 0.18098388910293578
+2021-02-13 00:43:13 INFO  ScoreIterationListener:393 - Score at iteration 55500 is 0.3823566913604736
+
+epoch = 52
+Training accuracy: 0.8336027384235049
+Validation  accuracy: 0.798022061620388
+2021-02-13 00:45:19 INFO  ScoreIterationListener:393 - Score at iteration 56000 is 0.479815673828125
+2021-02-13 00:46:57 INFO  ScoreIterationListener:393 - Score at iteration 56500 is 0.511690330505371
+
+epoch = 53
+Training accuracy: 0.8337929067224493
+Validation  accuracy: 0.799163179916318
+2021-02-13 00:49:03 INFO  ScoreIterationListener:393 - Score at iteration 57000 is 0.6704113006591796
+2021-02-13 00:50:41 INFO  ScoreIterationListener:393 - Score at iteration 57500 is 0.1333103895187378
+
+epoch = 54
+Training accuracy: 0.8357896738613673
+Validation  accuracy: 0.798022061620388
+2021-02-13 00:52:47 INFO  ScoreIterationListener:393 - Score at iteration 58000 is 0.307770299911499
+2021-02-13 00:54:25 INFO  ScoreIterationListener:393 - Score at iteration 58500 is 0.5121822357177734
+
+epoch = 55
+Training accuracy: 0.8322715603308929
+Validation  accuracy: 0.796880943324458
+2021-02-13 00:56:31 INFO  ScoreIterationListener:393 - Score at iteration 59000 is 0.5378020286560059
+2021-02-13 00:58:08 INFO  ScoreIterationListener:393 - Score at iteration 59500 is 1.0635972976684571
+
+epoch = 56
+Training accuracy: 0.838356945897119
+Validation  accuracy: 0.798782807151008
+2021-02-13 01:00:15 INFO  ScoreIterationListener:393 - Score at iteration 60000 is 0.6260561943054199
+2021-02-13 01:01:53 INFO  ScoreIterationListener:393 - Score at iteration 60500 is 0.2626659870147705
+2021-02-13 01:03:30 INFO  ScoreIterationListener:393 - Score at iteration 61000 is 0.3678233861923218
+
+epoch = 57
+Training accuracy: 0.8347437482171722
+Validation  accuracy: 0.796880943324458
+2021-02-13 01:05:36 INFO  ScoreIterationListener:393 - Score at iteration 61500 is 0.1560630440711975
+2021-02-13 01:07:14 INFO  ScoreIterationListener:393 - Score at iteration 62000 is 0.20631544589996337
+
+epoch = 58
+Training accuracy: 0.8344584957687553
+Validation  accuracy: 0.797261316089768
+2021-02-13 01:09:21 INFO  ScoreIterationListener:393 - Score at iteration 62500 is 0.22530546188354492
+2021-02-13 01:10:59 INFO  ScoreIterationListener:393 - Score at iteration 63000 is 0.09337286949157715
+
+epoch = 59
+Training accuracy: 0.838356945897119
+Validation  accuracy: 0.7957398250285279
+2021-02-13 01:13:05 INFO  ScoreIterationListener:393 - Score at iteration 63500 is 0.1768022060394287
+2021-02-13 01:14:42 INFO  ScoreIterationListener:393 - Score at iteration 64000 is 0.7935661315917969
+
+epoch = 60
+Training accuracy: 0.8305600456403918
+Validation  accuracy: 0.799163179916318
+2021-02-13 01:16:49 INFO  ScoreIterationListener:393 - Score at iteration 64500 is 0.38824846744537356
+2021-02-13 01:18:26 INFO  ScoreIterationListener:393 - Score at iteration 65000 is 0.7392942428588867
+
+epoch = 61
+Training accuracy: 0.8360749263097842
+Validation  accuracy: 0.797261316089768
+2021-02-13 01:20:33 INFO  ScoreIterationListener:393 - Score at iteration 65500 is 0.24030163288116455
+2021-02-13 01:22:10 INFO  ScoreIterationListener:393 - Score at iteration 66000 is 0.34942145347595216
+
+epoch = 62
+Training accuracy: 0.8347437482171722
+Validation  accuracy: 0.797641688855078
+2021-02-13 01:24:17 INFO  ScoreIterationListener:393 - Score at iteration 66500 is 0.3318058967590332
+2021-02-13 01:25:54 INFO  ScoreIterationListener:393 - Score at iteration 67000 is 0.5762404918670654
+
+epoch = 63
+Training accuracy: 0.8325568127793097
+Validation  accuracy: 0.799163179916318
+2021-02-13 01:28:01 INFO  ScoreIterationListener:393 - Score at iteration 67500 is 0.31396501064300536
+2021-02-13 01:29:39 INFO  ScoreIterationListener:393 - Score at iteration 68000 is 0.4100033760070801
+
+epoch = 64
+Training accuracy: 0.8373110202529238
+Validation  accuracy: 0.798402434385698
+2021-02-13 01:31:45 INFO  ScoreIterationListener:393 - Score at iteration 68500 is 0.2279505491256714
+2021-02-13 01:33:23 INFO  ScoreIterationListener:393 - Score at iteration 69000 is 0.2786646842956543
+
+epoch = 65
+Training accuracy: 0.835029000665589
+Validation  accuracy: 0.796880943324458
+2021-02-13 01:35:29 INFO  ScoreIterationListener:393 - Score at iteration 69500 is 0.24155614376068116
+2021-02-13 01:37:06 INFO  ScoreIterationListener:393 - Score at iteration 70000 is 1.064134407043457
+
+epoch = 66
+Training accuracy: 0.8368355995055624
+Validation  accuracy: 0.797261316089768
+2021-02-13 01:39:13 INFO  ScoreIterationListener:393 - Score at iteration 70500 is 0.08408129811286927
+2021-02-13 01:40:50 INFO  ScoreIterationListener:393 - Score at iteration 71000 is 0.5343461513519288
+2021-02-13 01:42:28 INFO  ScoreIterationListener:393 - Score at iteration 71500 is 0.6591814041137696
+
+epoch = 67
+Training accuracy: 0.8349339165161168
+Validation  accuracy: 0.796880943324458
+2021-02-13 01:44:35 INFO  ScoreIterationListener:393 - Score at iteration 72000 is 0.23250930309295653
+2021-02-13 01:46:12 INFO  ScoreIterationListener:393 - Score at iteration 72500 is 0.24814996719360352
+
+epoch = 68
+Training accuracy: 0.8364552629076732
+Validation  accuracy: 0.798782807151008
+2021-02-13 01:48:19 INFO  ScoreIterationListener:393 - Score at iteration 73000 is 0.09562329649925232
+2021-02-13 01:49:57 INFO  ScoreIterationListener:393 - Score at iteration 73500 is 1.0374025344848632
+
+epoch = 69
+Training accuracy: 0.8327469810782543
+Validation  accuracy: 0.797261316089768
+2021-02-13 01:52:03 INFO  ScoreIterationListener:393 - Score at iteration 74000 is 0.17922269105911254
+2021-02-13 01:53:40 INFO  ScoreIterationListener:393 - Score at iteration 74500 is 0.3291220188140869
+
+epoch = 70
+Training accuracy: 0.837025767804507
+Validation  accuracy: 0.796880943324458
+2021-02-13 01:55:47 INFO  ScoreIterationListener:393 - Score at iteration 75000 is 0.5548999786376954
+2021-02-13 01:57:24 INFO  ScoreIterationListener:393 - Score at iteration 75500 is 0.2503047943115234
+
+epoch = 71
+Training accuracy: 0.8405438813349815
+Validation  accuracy: 0.7953594522632179
+2021-02-13 01:59:31 INFO  ScoreIterationListener:393 - Score at iteration 76000 is 0.674449110031128
+2021-02-13 02:01:08 INFO  ScoreIterationListener:393 - Score at iteration 76500 is 0.23530759811401367
+
+epoch = 72
+Training accuracy: 0.8419701435770657
+Validation  accuracy: 0.798022061620388
+2021-02-13 02:03:15 INFO  ScoreIterationListener:393 - Score at iteration 77000 is 0.02382611483335495
+2021-02-13 02:04:53 INFO  ScoreIterationListener:393 - Score at iteration 77500 is 0.4081989288330078
+
+epoch = 73
+Training accuracy: 0.8407340496339261
+Validation  accuracy: 0.797261316089768
+2021-02-13 02:06:59 INFO  ScoreIterationListener:393 - Score at iteration 78000 is 0.4318234443664551
+2021-02-13 02:08:36 INFO  ScoreIterationListener:393 - Score at iteration 78500 is 0.16464710235595703
+
+epoch = 74
+Training accuracy: 0.8364552629076732
+Validation  accuracy: 0.798402434385698
+2021-02-13 02:10:43 INFO  ScoreIterationListener:393 - Score at iteration 79000 is 0.7833655834197998
+2021-02-13 02:12:20 INFO  ScoreIterationListener:393 - Score at iteration 79500 is 0.6022749900817871
+
+epoch = 75
+Training accuracy: 0.8344584957687553
+Validation  accuracy: 0.798402434385698
+2021-02-13 02:14:27 INFO  ScoreIterationListener:393 - Score at iteration 80000 is 0.5287390232086182
+2021-02-13 02:16:04 INFO  ScoreIterationListener:393 - Score at iteration 80500 is 0.6655642509460449
+2021-02-13 02:17:42 INFO  ScoreIterationListener:393 - Score at iteration 81000 is 0.42088770866394043
+
+epoch = 76
+Training accuracy: 0.8385471141960635
+Validation  accuracy: 0.7957398250285279
+2021-02-13 02:19:48 INFO  ScoreIterationListener:393 - Score at iteration 81500 is 0.5252482891082764
+2021-02-13 02:21:26 INFO  ScoreIterationListener:393 - Score at iteration 82000 is 0.11835712194442749
+
+epoch = 77
+Training accuracy: 0.8371208519539792
+Validation  accuracy: 0.801065043742868
+2021-02-13 02:23:32 INFO  ScoreIterationListener:393 - Score at iteration 82500 is 0.6622195243835449
+2021-02-13 02:25:09 INFO  ScoreIterationListener:393 - Score at iteration 83000 is 0.31482980251312254
+
+epoch = 78
+Training accuracy: 0.843776742417039
+Validation  accuracy: 0.798782807151008
+2021-02-13 02:27:16 INFO  ScoreIterationListener:393 - Score at iteration 83500 is 0.6003131866455078
+2021-02-13 02:28:53 INFO  ScoreIterationListener:393 - Score at iteration 84000 is 0.6998688220977783
+
+epoch = 79
+Training accuracy: 0.8401635447370923
+Validation  accuracy: 0.798402434385698
+2021-02-13 02:31:00 INFO  ScoreIterationListener:393 - Score at iteration 84500 is 0.5623224258422852
+2021-02-13 02:32:37 INFO  ScoreIterationListener:393 - Score at iteration 85000 is 0.419143533706665
+
+epoch = 80
+Training accuracy: 0.8397832081392032
+Validation  accuracy: 0.7965005705591479
+2021-02-13 02:34:44 INFO  ScoreIterationListener:393 - Score at iteration 85500 is 0.42978658676147463
+2021-02-13 02:36:21 INFO  ScoreIterationListener:393 - Score at iteration 86000 is 0.5448511123657227
+
+epoch = 81
+Training accuracy: 0.8430160692212608
+Validation  accuracy: 0.798022061620388
+2021-02-13 02:38:28 INFO  ScoreIterationListener:393 - Score at iteration 86500 is 0.34423558712005614
+2021-02-13 02:40:05 INFO  ScoreIterationListener:393 - Score at iteration 87000 is 0.2270031452178955
+
+epoch = 82
+Training accuracy: 0.8416848911286489
+Validation  accuracy: 0.797641688855078
+2021-02-13 02:42:12 INFO  ScoreIterationListener:393 - Score at iteration 87500 is 0.3781463861465454
+2021-02-13 02:43:50 INFO  ScoreIterationListener:393 - Score at iteration 88000 is 0.470321798324585
+
+epoch = 83
+Training accuracy: 0.8419701435770657
+Validation  accuracy: 0.7965005705591479
+2021-02-13 02:45:56 INFO  ScoreIterationListener:393 - Score at iteration 88500 is 0.8600115776062012
+2021-02-13 02:47:33 INFO  ScoreIterationListener:393 - Score at iteration 89000 is 0.12404927015304565
+
+epoch = 84
+Training accuracy: 0.8385471141960635
+Validation  accuracy: 0.799543552681628
+2021-02-13 02:49:40 INFO  ScoreIterationListener:393 - Score at iteration 89500 is 0.2781118392944336
+2021-02-13 02:51:17 INFO  ScoreIterationListener:393 - Score at iteration 90000 is 0.13404245376586915
+
+epoch = 85
+Training accuracy: 0.8416848911286489
+Validation  accuracy: 0.796880943324458
+2021-02-13 02:53:23 INFO  ScoreIterationListener:393 - Score at iteration 90500 is 0.27220346927642824
+2021-02-13 02:55:01 INFO  ScoreIterationListener:393 - Score at iteration 91000 is 0.34665694236755373
+2021-02-13 02:56:38 INFO  ScoreIterationListener:393 - Score at iteration 91500 is 0.47843308448791505
+
+epoch = 86
+Training accuracy: 0.8414947228297043
+Validation  accuracy: 0.800304298212248
+2021-02-13 02:58:45 INFO  ScoreIterationListener:393 - Score at iteration 92000 is 0.26375527381896974
+2021-02-13 03:00:23 INFO  ScoreIterationListener:393 - Score at iteration 92500 is 0.48520336151123045
+
+epoch = 87
+Training accuracy: 0.8386421983455358
+Validation  accuracy: 0.798402434385698
+2021-02-13 03:02:29 INFO  ScoreIterationListener:393 - Score at iteration 93000 is 0.5149087905883789
+2021-02-13 03:04:06 INFO  ScoreIterationListener:393 - Score at iteration 93500 is 0.21458015441894532
+
+epoch = 88
+Training accuracy: 0.8425406484738994
+Validation  accuracy: 0.800684670977558
+2021-02-13 03:06:13 INFO  ScoreIterationListener:393 - Score at iteration 94000 is 0.3132314920425415
+2021-02-13 03:07:50 INFO  ScoreIterationListener:393 - Score at iteration 94500 is 0.2392188787460327
+
+epoch = 89
+Training accuracy: 0.8445374156128174
+Validation  accuracy: 0.796880943324458
+2021-02-13 03:09:57 INFO  ScoreIterationListener:393 - Score at iteration 95000 is 0.5793398857116699
+2021-02-13 03:11:34 INFO  ScoreIterationListener:393 - Score at iteration 95500 is 0.22085084915161132
+
+epoch = 90
+Training accuracy: 0.842065227726538
+Validation  accuracy: 0.798402434385698
+2021-02-13 03:13:41 INFO  ScoreIterationListener:393 - Score at iteration 96000 is 0.690674114227295
+2021-02-13 03:15:18 INFO  ScoreIterationListener:393 - Score at iteration 96500 is 0.6733561515808105
+
+epoch = 91
+Training accuracy: 0.8404487971855091
+Validation  accuracy: 0.7957398250285279
+2021-02-13 03:17:24 INFO  ScoreIterationListener:393 - Score at iteration 97000 is 0.9820702552795411
+2021-02-13 03:19:02 INFO  ScoreIterationListener:393 - Score at iteration 97500 is 0.39623332023620605
+
+epoch = 92
+Training accuracy: 0.8410193020823429
+Validation  accuracy: 0.798782807151008
+2021-02-13 03:21:09 INFO  ScoreIterationListener:393 - Score at iteration 98000 is 0.43908052444458007
+2021-02-13 03:22:46 INFO  ScoreIterationListener:393 - Score at iteration 98500 is 0.240516996383667
+
+epoch = 93
+Training accuracy: 0.8416848911286489
+Validation  accuracy: 0.801445416508178
+2021-02-13 03:24:53 INFO  ScoreIterationListener:393 - Score at iteration 99000 is 1.024825096130371
+2021-02-13 03:26:30 INFO  ScoreIterationListener:393 - Score at iteration 99500 is 0.3026237964630127
+
+epoch = 94
+Training accuracy: 0.8407340496339261
+Validation  accuracy: 0.798782807151008
+2021-02-13 03:28:37 INFO  ScoreIterationListener:393 - Score at iteration 100000 is 0.630404281616211
+2021-02-13 03:30:14 INFO  ScoreIterationListener:393 - Score at iteration 100500 is 0.31458215713500975
+
+epoch = 95
+Training accuracy: 0.837691356850813
+Validation  accuracy: 0.798022061620388
+2021-02-13 03:32:21 INFO  ScoreIterationListener:393 - Score at iteration 101000 is 0.37915549278259275
+2021-02-13 03:33:58 INFO  ScoreIterationListener:393 - Score at iteration 101500 is 0.27156553268432615
+2021-02-13 03:35:36 INFO  ScoreIterationListener:393 - Score at iteration 102000 is 0.3746559381484985
+
+epoch = 96
+Training accuracy: 0.8433013216696776
+Validation  accuracy: 0.798782807151008
+2021-02-13 03:37:42 INFO  ScoreIterationListener:393 - Score at iteration 102500 is 0.6010923385620117
+2021-02-13 03:39:20 INFO  ScoreIterationListener:393 - Score at iteration 103000 is 0.45051088333129885
+
+epoch = 97
+Training accuracy: 0.844061994865456
+Validation  accuracy: 0.796880943324458
+2021-02-13 03:41:26 INFO  ScoreIterationListener:393 - Score at iteration 103500 is 0.24345979690551758
+2021-02-13 03:43:04 INFO  ScoreIterationListener:393 - Score at iteration 104000 is 0.0882278025150299
+
+epoch = 98
+Training accuracy: 0.8415898069791766
+Validation  accuracy: 0.800304298212248
+2021-02-13 03:45:10 INFO  ScoreIterationListener:393 - Score at iteration 104500 is 0.22173449993133545
+2021-02-13 03:46:48 INFO  ScoreIterationListener:393 - Score at iteration 105000 is 1.2153189659118653
+
+epoch = 99
+Training accuracy: 0.844442331463345
+Validation  accuracy: 0.799543552681628
+
+Training:
+
+========================Evaluation Metrics========================
+ # of classes:    6
+ Accuracy:        0.8421
+ Precision:       0.8417
+ Recall:          0.8421
+ F1 Score:        0.8418
+Precision, recall & F1: macro-averaged (equally weighted avg. of 6 classes)
+
+
+=========================Confusion Matrix=========================
+    0    1    2    3    4    5
+-------------------------------
+ 1376   39   29   40   47  222 | 0 = buildings
+   18 1685    7   16    5   21 | 1 = forest
+   31   12 1414  193   91   12 | 2 = glacier
+   24   12  191 1422   97    7 | 3 = mountain
+   70    8   93  106 1458   18 | 4 = sea
+  163   39   14   10   26 1501 | 5 = street
+
+Confusion matrix format: Actual (rowClass) predicted as (columnClass) N times
+==================================================================
+Test:
+
+========================Evaluation Metrics========================
+ # of classes:    6
+ Accuracy:        0.7995
+ Precision:       0.7986
+ Recall:          0.7995
+ F1 Score:        0.7984
+Precision, recall & F1: macro-averaged (equally weighted avg. of 6 classes)
+
+
+=========================Confusion Matrix=========================
+   0   1   2   3   4   5
+-------------------------
+ 305  18   5  13  22  75 | 0 = buildings
+   9 415   0   4   0  11 | 1 = forest
+  11  12 330  66  16   3 | 2 = glacier
+  12   2  44 341  38   1 | 3 = mountain
+   9   3  27  32 366   1 | 4 = sea
+  57  20   3   7   6 345 | 5 = street
+
+Confusion matrix format: Actual (rowClass) predicted as (columnClass) N times
+==================================================================
+2021-02-13 03:48:24 INFO  VertxUIServer:386 - Deeplearning4j UI server is auto-stopping after thread (name: main) died.
+2021-02-13 03:48:24 INFO  VertxUIServer:382 - Deeplearning4j UI server stopped.
+
+Process finished with exit code 0
+
+
 
 
